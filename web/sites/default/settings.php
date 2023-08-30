@@ -843,15 +843,6 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_zWlTs-BYsqr9akV-vIdPMMa6svn85fkaY8KUkb4E6IlKwu79B_e1681PgAsM1CFAscc2VnoFNw/sync';
-$databases['default']['default'] = array (
-  'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
+// Configure config sync directory.
+$settings['config_sync_directory'] = '../config/default';
+
