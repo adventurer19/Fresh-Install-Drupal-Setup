@@ -1,0 +1,55 @@
+# OS-specific files.
+.DS_Store
+
+# Editor and language files.
+.idea/
+.project/
+.bundle/
+.vscode
+
+# Backup files.
+*.sql
+*.gz
+*.bak
+
+# Ignore node modules
+node_modules
+
+# Drupal core
+web/core
+
+# Ignore the contrib libraries
+web/libraries
+
+# Ignore the contrib modules
+web/modules/contrib
+
+# Ignore the contrib themes
+web/themes/contrib
+
+# Composer's vendor folder.
+vendor/
+
+# Ignore local env file
+.env
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+
+# Ignore BLT files.
+local.drush.yml
+local.site.yml
+local.services.yml
+*.local
+blt/local/*
+local.blt.yml
+/files-private
+.phpcs-cache
+local.settings.php
+deployment_identifier
+/travis_wait*
+
+# Ignore Lando files.
+.lando.local.yml
+
