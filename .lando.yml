@@ -3,6 +3,7 @@ recipe: drupal10
 
 # Default configuration.
 config:
+  webroot: web
   xdebug: false
   php: '8.1'
 
