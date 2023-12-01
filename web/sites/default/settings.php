@@ -845,4 +845,9 @@ $databases['default']['default'] = array (
 );
 // Configure config sync directory.
 $settings['config_sync_directory'] = '../config/default';
+$config['my_module.settings']['message'] = 'new msg';
+$config['system.logging']['error_level'] = 'verbose';
 
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+ include $app_root . '/' . $site_path . '/settings.local.php';
+}

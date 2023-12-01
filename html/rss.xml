@@ -1,0 +1,119 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_rss' -->
+<!-- BEGIN OUTPUT from 'core/modules/views/templates/views-view-rss.html.twig' -->
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://drupalonfire.lndo.site/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Drush Site-Install</title>
+    <link>https://drupalonfire.lndo.site/</link>
+    <description></description>
+    <language>en</language>
+    
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_row_rss' -->
+<!-- BEGIN OUTPUT from 'core/modules/views/templates/views-view-row-rss.html.twig' -->
+<item>
+  <title>This is First Article</title>
+  <link>https://drupalonfire.lndo.site/node/1</link>
+  <description>
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--title--article.html.twig
+   x field--node--title.html.twig
+   * field--node--article.html.twig
+   * field--title.html.twig
+   * field--string.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/modules/node/templates/field--node--title.html.twig&#039; --&gt;
+
+&lt;span&gt;This is First Article&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/modules/node/templates/field--node--title.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--uid--article.html.twig
+   x field--node--uid.html.twig
+   * field--node--article.html.twig
+   * field--uid.html.twig
+   * field--entity-reference.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/modules/node/templates/field--node--uid.html.twig&#039; --&gt;
+
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;username&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/olivero/templates/user/username.html.twig&#039; --&gt;
+&lt;span&gt;admin&lt;/span&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/olivero/templates/user/username.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/modules/node/templates/field--node--uid.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--created--article.html.twig
+   x field--node--created.html.twig
+   * field--node--article.html.twig
+   * field--created.html.twig
+   * field--created.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/modules/node/templates/field--node--created.html.twig&#039; --&gt;
+
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;time&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/modules/system/templates/time.html.twig&#039; --&gt;
+&lt;time datetime=&quot;2023-11-13T12:54:09+01:00&quot; title=&quot;Monday, November 13, 2023 - 12:54&quot;&gt;Mon, 11/13/2023 - 12:54&lt;/time&gt;
+
+&lt;!-- END OUTPUT from &#039;core/modules/system/templates/time.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/modules/node/templates/field--node--created.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;links__node&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/olivero/templates/navigation/links.html.twig&#039; --&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/olivero/templates/navigation/links.html.twig&#039; --&gt;
+
+</description>
+  <pubDate>Mon, 13 Nov 2023 11:54:09 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">1 at https://drupalonfire.lndo.site</guid>
+    <comments>https://drupalonfire.lndo.site/node/1#comments</comments>
+    </item>
+
+<!-- END OUTPUT from 'core/modules/views/templates/views-view-row-rss.html.twig' -->
+
+
+  </channel>
+</rss>
+
+<!-- END OUTPUT from 'core/modules/views/templates/views-view-rss.html.twig' -->
+

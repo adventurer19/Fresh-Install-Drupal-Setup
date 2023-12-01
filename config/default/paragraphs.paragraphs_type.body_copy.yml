@@ -1,0 +1,10 @@
+uuid: 17208340-7065-4664-9459-8320d766a0f7
+langcode: en
+status: true
+dependencies: {  }
+id: body_copy
+label: 'Body Copy'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

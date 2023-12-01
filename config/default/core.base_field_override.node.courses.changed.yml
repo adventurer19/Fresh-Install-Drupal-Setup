@@ -1,0 +1,18 @@
+uuid: 94d09c2c-0252-4630-a3a4-71bc688a9230
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.courses
+id: node.courses.changed
+field_name: changed
+entity_type: node
+bundle: courses
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

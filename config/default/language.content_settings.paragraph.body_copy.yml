@@ -1,0 +1,18 @@
+uuid: 7affdbd5-87cb-4f11-8000-103ee024fe62
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.body_copy
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.body_copy
+target_entity_type_id: paragraph
+target_bundle: body_copy
+default_langcode: site_default
+language_alterable: true

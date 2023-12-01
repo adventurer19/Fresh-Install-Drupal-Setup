@@ -1,0 +1,21 @@
+uuid: d08eb410-3e2e-4c93-83ec-11c80d7612ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.courses
+  module:
+    - text
+id: taxonomy_term.courses.description
+field_name: description
+entity_type: taxonomy_term
+bundle: courses
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

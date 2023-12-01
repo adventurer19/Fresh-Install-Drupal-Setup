@@ -1,0 +1,50 @@
+{
+    "uuid": [
+        {
+            "value": "379ca0bf-2da0-4345-a2dc-daac74085d53"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "body_copy",
+            "target_type": "paragraphs_type",
+            "target_uuid": "17208340-7065-4664-9459-8320d766a0f7"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-11-15T15:56:48+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_body_copy_text_plain": [
+        {
+            "value": "niki fr"
+        }
+    ]
+}

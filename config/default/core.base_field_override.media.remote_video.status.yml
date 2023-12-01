@@ -1,0 +1,22 @@
+uuid: faf6ddb8-a1fc-44d9-9d34-4ebb9ef46799
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.status
+field_name: status
+entity_type: media
+bundle: remote_video
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,32 @@
+uuid: b4151210-1f89-4f5e-8af4-72920be1aa9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.mvp
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.mvp
+targetEntityType: user
+bundle: user
+mode: mvp
+content:
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  member_for: true

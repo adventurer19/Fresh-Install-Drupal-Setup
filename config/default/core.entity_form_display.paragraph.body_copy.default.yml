@@ -1,0 +1,23 @@
+uuid: 62a3e5b8-dfbe-4cfb-a80a-548060bd9590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.body_copy.field_body_copy_text_plain
+    - paragraphs.paragraphs_type.body_copy
+id: paragraph.body_copy.default
+targetEntityType: paragraph
+bundle: body_copy
+mode: default
+content:
+  field_body_copy_text_plain:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

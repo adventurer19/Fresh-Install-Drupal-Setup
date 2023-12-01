@@ -1,0 +1,116 @@
+{
+    "uuid": [
+        {
+            "value": "22a440de-a31f-4d44-bf3e-79661ca46bc0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article",
+            "target_type": "node_type",
+            "target_uuid": "78a86bba-901a-4b03-8611-a1fbacb30be0"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2023-11-15T23:22:34+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "eff99ea4-248f-482b-a74f-f5e7b12f394d"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "eff99ea4-248f-482b-a74f-f5e7b12f394d"
+        }
+    ],
+    "title": [
+        {
+            "value": "niki FRENCH"
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-11-15T23:22:10+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-11-15T23:22:34+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": false
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "",
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "en"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false
+        }
+    ],
+    "body": [],
+    "comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 0,
+            "last_comment_name": "",
+            "last_comment_uid": 0,
+            "comment_count": 0
+        }
+    ],
+    "field_compo": [
+        {
+            "target_type": "paragraph",
+            "target_uuid": "0625a15b-aa91-4702-9dd9-3027f2015f1e"
+        }
+    ],
+    "field_image": [],
+    "field_tags": []
+}

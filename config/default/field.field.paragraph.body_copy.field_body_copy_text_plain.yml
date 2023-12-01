@@ -1,0 +1,19 @@
+uuid: 87ab44b9-6f16-4f1e-b69c-f9fcab8e7774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_copy_text_plain
+    - paragraphs.paragraphs_type.body_copy
+id: paragraph.body_copy.field_body_copy_text_plain
+field_name: field_body_copy_text_plain
+entity_type: paragraph
+bundle: body_copy
+label: 'Body copy TEXT PLAIN'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

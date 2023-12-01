@@ -1,0 +1,20 @@
+uuid: ef49e60c-ca08-4399-b21c-621045b72520
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.name
+field_name: name
+entity_type: media
+bundle: document
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string
