@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\rxp_jsonapi\Plugin;
+namespace Drupal\rxp_jsonapi;
 
 use Drupal\Core\Plugin\DefaultPluginManager;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
-use Drupal\rxp_jsonapi\Annotation\JsonApiPlugin;
+use Drupal\rxp_jsonapi\Annotation\JsonApiExtension;
 
 /**
  * Provides a JSON API plugin manager.
@@ -24,7 +24,8 @@ class JsonApiPluginManager extends DefaultPluginManager {
    *   The module handler to invoke the alter hook with.
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
-    parent::__construct('Plugin/JsonApi', $namespaces, $module_handler, JsonApiPluginInterface::class, JsonApiPlugin::class);
+    // The name of the annotation class that contains the plugin definition.
+    parent::__construct('Plugin/JsonApi', $namespaces, $module_handler, JsonApiPluginInterface::class, JsonApiExtension::class);
 
     $this->alterInfo('jsonapi_custom_jsonapi_plugin_info');
     $this->setCacheBackend($cache_backend, 'jsonapi_custom_jsonapi_plugins');

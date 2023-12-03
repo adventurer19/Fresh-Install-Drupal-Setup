@@ -9,7 +9,7 @@ use Drupal\Component\Annotation\Plugin;
  *
  * @Annotation
  */
-class JsonApiPlugin extends Plugin {
+class JsonApiExtension extends Plugin {
 
   /**
    * The plugin ID.
@@ -24,4 +24,11 @@ class JsonApiPlugin extends Plugin {
    * @var string
    */
   public $name;
+
+  /**
+   * The plugin name.
+   *
+   * @var string
+   */
+  public $entity_type;
 }
