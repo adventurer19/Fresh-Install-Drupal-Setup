@@ -33,3 +33,10 @@ rxp_render.custom_template:
     _title: 'Custom template'
   requirements:
     _access: 'TRUE'
+rxp_render.demo_controller:
+  path: '/rxp-render/demo-controller'
+  defaults:
+    _controller: '\Drupal\rxp_render\Controller\DemoController::index'
+    _title: 'Demo Controller'
+  requirements:
+    _access: 'TRUE'
