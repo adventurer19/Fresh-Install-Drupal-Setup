@@ -1,0 +1,3 @@
+services:
+  rxp_render.coffe_helper:
+    class: '\Drupal\rxp_render\utils\CoffeHelper'

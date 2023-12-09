@@ -1,3 +1,10 @@
+rxp_render.my_coffe:
+  path: '/my-coffe'
+  defaults:
+    _controller: 'rxp_render.coffe_helper:renderCoffer'
+    _title: 'My Coffe'
+  requirements:
+    _access: 'TRUE'
 rxp_render.index:
   path: '/renderer'
   defaults:
