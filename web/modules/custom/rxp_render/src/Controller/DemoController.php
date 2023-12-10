@@ -20,9 +20,44 @@ class DemoController extends ControllerBase {
   protected ContainerAwareEventDispatcher $eventDispatcher;
 
   public function index() {
+    $build['examples_link'] = [
+      '#title' => $this
+        ->t('Render element link'),
+      '#type' => 'link',
+      '#ajax' => [
+        'dialogType' => 'modal',
+        'dialog' => ['height' => 400, 'width' => 700],
+      ],
+
+      //        'data-dialog-renderer' => "off_canvas"
+      '#url' => \Drupal\Core\Url::fromRoute('node.add', ['node_type' => 'article']),
+    ];
+    return $build;
+    return [
+      '#markup' => '        <a class="edit-button use-ajax" 
+            data-dialog-options="{&quot;width&quot;:400}" 
+            data-dialog-renderer="off_canvas" 
+            data-dialog-type="dialog" 
+            href="/node/2">
+            Third article displayed in a nice off canvas dialog.
+        </a>
+',
+    ];
+
+    return [
+      '#markup' => '<a class="use-ajax" 
+    data-dialog-options="{&quot;width&quot;:400}" 
+    data-dialog-type="modal" 
+    href="/node/1">
+    First node displayed in modal dialog.
+</a>',
+    ];
+
+    $node = Node::load(1);
+    $module_handler = \Drupal::moduleHandler()
+      ->invoke('mm_email', 'node_update', [$node]);
     $operation = 'update';
     $operation = 'delete';
-    $node = Node::load(1);
 
     if ($operation === 'delete') {
       $event = new DemoEvent($node, $operation);
@@ -32,7 +67,7 @@ class DemoController extends ControllerBase {
       $event = new DemoEvent($node, $operation);
       $this->eventDispatcher->dispatch($event, DemoEvent::UPDATE_NODE);
     }
-      
+
     $data = [
       '#markup' => $this->t('This is random data'),
     ];

@@ -17,7 +17,6 @@ class DemoEventSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
-      // Static class constant => method on this class.
       DemoEvent::UPDATE_NODE => 'onNodeUpdate',
       DemoEvent::REMOVE_COURSE => 'onNodeRemove',
     ];
