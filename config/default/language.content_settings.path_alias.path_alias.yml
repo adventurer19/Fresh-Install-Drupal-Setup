@@ -1,4 +1,4 @@
-uuid: 8258cd00-cd78-4682-9023-9e89f3dc87e5
+uuid: 4d7eefe5-06b5-468f-ae25-40e93bd493bf
 langcode: en
 status: true
 dependencies:
@@ -10,4 +10,4 @@ id: path_alias.path_alias
 target_entity_type_id: path_alias
 target_bundle: path_alias
 default_langcode: und
-language_alterable: false
+language_alterable: true

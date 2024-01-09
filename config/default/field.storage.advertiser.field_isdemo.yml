@@ -1,0 +1,18 @@
+uuid: 24205343-18b6-45b8-a585-f18ce9223482
+langcode: en
+status: true
+dependencies:
+  module:
+    - bank_consult_advertiser
+id: advertiser.field_isdemo
+field_name: field_isdemo
+entity_type: advertiser
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

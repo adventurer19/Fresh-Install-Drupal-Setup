@@ -1,4 +1,4 @@
-uuid: 4ef57bf8-27df-47a8-859d-95462ac5e557
+uuid: 1fda7943-e454-4a8d-b918-31acb054f995
 langcode: en
 status: true
 dependencies:
@@ -16,8 +16,6 @@ bundle: user
 mode: default
 content:
   member_for:
-    settings: {  }
-    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:

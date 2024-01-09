@@ -1,0 +1,33 @@
+bank_consult_controllers.view_builder:
+  path: '/bank-consult-controllers/view-builder'
+  defaults:
+    _entity_list: advertiser
+    _title: 'Advertiser List Builder'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _node_operation_route: true
+bank_consult_controllers.type.view_builder:
+  path: '/bank-consult-controllers/{entity_type}/{example}'
+  defaults:
+    _entity_list: advertiser
+    _title: 'Advertiser List Builder'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    parameters:
+      example:
+        type: entity:{entity_type}
+bank_consult_controllers.entity_delete:
+  path: '/bank-consult-controllers/{entity_type}/{entity}'
+  defaults:
+    _controller: 'Drupal\bank_consult_controllers\Controller\MainController::delete'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+
+#    _node_operation_route: true
+#    /{entity_type}/{example}

@@ -1,4 +1,4 @@
-uuid: 85c3b2b1-d33d-4dd5-93e9-68d4225bf092
+uuid: 0a574fe3-5597-4830-b7eb-c192da9c0161
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,7 @@ dependencies:
     - toolbar
     - tour
 _core:
-  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+  default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
 label: 'Content editor'
 weight: 2
@@ -36,6 +36,7 @@ permissions:
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
   - 'edit own article content'

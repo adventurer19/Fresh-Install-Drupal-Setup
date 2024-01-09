@@ -1,0 +1,35 @@
+uuid: be20b5f5-ff21-400a-9d2a-c9310cf590ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - bank_consult_advertiser.advertiser_type.mvp
+    - field.field.advertiser.mvp.field_isdemo
+id: advertiser.mvp.default
+targetEntityType: advertiser
+bundle: mvp
+mode: default
+content:
+  field_isdemo:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

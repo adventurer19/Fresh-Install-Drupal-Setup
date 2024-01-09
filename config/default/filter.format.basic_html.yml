@@ -1,11 +1,11 @@
-uuid: a108ca2d-8084-41f2-9054-3f66f3795b08
+uuid: 9c12f09b-ef9a-4259-9f1c-dda341ac4406
 langcode: en
 status: true
 dependencies:
   module:
     - editor
 _core:
-  default_config_hash: RjoJPQLCAE8u1Ys_yCKubpkYlRz_Oy12a5qCVeNIHJ8
+  default_config_hash: mufoCrfOvOmGXWBLRwQblEQbGEKQz09rnTbXnuVGC9o
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -36,6 +36,12 @@ filters:
     provider: filter
     status: true
     weight: 9
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 15
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
