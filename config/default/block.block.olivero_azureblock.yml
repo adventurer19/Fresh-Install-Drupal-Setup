@@ -1,0 +1,21 @@
+uuid: 1336b669-4af5-421c-9767-f73e87a67cc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - azure_block
+  theme:
+    - olivero
+id: olivero_azureblock
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: azure_block
+settings:
+  id: azure_block
+  label: 'Azure block'
+  label_display: visible
+  provider: azure_block
+  fax_number: '1919'
+visibility: {  }

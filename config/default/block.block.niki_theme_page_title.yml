@@ -1,0 +1,20 @@
+uuid: d248759d-cdbf-49f4-8a4f-27b1e4d1a036
+langcode: en
+status: true
+dependencies:
+  theme:
+    - niki_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: niki_theme_page_title
+theme: niki_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

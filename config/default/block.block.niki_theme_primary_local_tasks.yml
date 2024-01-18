@@ -1,0 +1,22 @@
+uuid: 657df593-240c-4862-8487-2f444b4eddf3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - niki_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: niki_theme_primary_local_tasks
+theme: niki_theme
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

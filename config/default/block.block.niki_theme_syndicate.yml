@@ -1,0 +1,23 @@
+uuid: 4a56c201-2df9-425f-a079-54eccfa35f85
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - niki_theme
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: niki_theme_syndicate
+theme: niki_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

@@ -1,17 +1,14 @@
-uuid: 0a4df081-a50e-45da-8336-6d998712d6f9
+uuid: 349afa93-e6fc-4d5c-8834-6c7e3168c04d
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
-    - comment
-    - image
+    - media_library
     - path
     - text
 _core:
@@ -31,12 +28,6 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -44,12 +35,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: image_image
-    weight: 1
+    type: media_library_widget
+    weight: 121
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags

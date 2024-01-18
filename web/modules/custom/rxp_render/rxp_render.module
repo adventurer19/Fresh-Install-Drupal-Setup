@@ -17,9 +17,20 @@ function rxp_render_theme($existing, $type, $theme, $path) {
       'variables' => [
         'title' => 'This is just default title.',
       ],
-
+    ],
+    'my_element' => [
+      'render element' => 'element',
     ],
   ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function rxp_render_preprocess_my_element(&$variables) {
+// $variables['element']['description'] = $variables['element']['#description'];
+  $a = 1;
+
 }
 
 /**
@@ -31,7 +42,6 @@ function rxp_render_theme_suggestions_rxp_render_theme_template(array $variables
   for ($i = 0; $i < 10; $i++) {
     if (isset($variables['theme_hook_original'])) {
       $suggestion[] = $variables['theme_hook_original'] . $data->string(5);
-
     }
   }
   return $suggestion;
@@ -64,7 +74,7 @@ function rxp_render_theme_suggestions_rxp_render_theme_template_alter(array &$su
 /**
  * Implements hook_preprocess_().
  */
-function rxp_render_preprocess_rxp_render_theme_template(&$variables, $hook){
+function rxp_render_preprocess_rxp_render_theme_template(&$variables, $hook) {
   if (!\Drupal::currentUser()->isAnonymous()) {
     $variables['name'] = 'Nikolay';
   }

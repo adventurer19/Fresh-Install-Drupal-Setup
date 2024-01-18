@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\StreamWrapper\StreamWrapperManager;
+
+/**
+ * Implements hook_file_download().
+ */
+function azure_file_file_download($uri) {
+  // Just a demo
+  $user = \Drupal::currentUser();
+  $scheme = StreamWrapperManager::getScheme($uri);
+  if (!$user->hasPermission('download azure file')) {
+    return -1;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ */
+function azure_file_node_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  if ($entity->id() === '9') {
+    // todo alter view of node with id 9
+  }
+}
+
+/**
+ * Implements hook_entity_access().
+ */
+function azure_file_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  // Another example of this hook..
+//  if (!$account->hasPermission('download azure file')) {
+//    return AccessResult::forbidden('Forbidden!');
+//  }
+}

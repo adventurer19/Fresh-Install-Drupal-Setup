@@ -1,0 +1,22 @@
+uuid: 349df55d-33e5-4396-a933-6a32e2d702e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - niki_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: niki_theme_breadcrumbs
+theme: niki_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

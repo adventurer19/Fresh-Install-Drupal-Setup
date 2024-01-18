@@ -24,6 +24,10 @@
     "drupal/core-project-message": "^10.0",
     "drupal/core-recommended": "^10.0",
     "drupal/devel": "^5.0",
+    "drupal/examples": "^4.0",
+    "drupal/file_download_link": "^2.0",
+    "drupal/gin": "^3.0@rc",
+    "drupal/gin_toolbar": "^1.0@rc",
     "drupal/paragraphs": "^1.16",
     "drupal/tome": "^1.11",
     "drush/drush": "^12.1"

@@ -22,7 +22,7 @@ class RenderController extends ControllerBase {
    */
   public function renderMyCustomTwig(): array {
     return [
-      '#theme' => 'rxp_render_theme_template',
+      '#theme' => 'my_first_theme_hook',
       '#title' => 'Niki Pench Template',
     ];
   }

@@ -5,19 +5,47 @@ namespace Drupal\rxp_render\Controller;
 use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
 use Drupal\Component\Utility\EmailValidator;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Render\RendererInterface;
 use Drupal\node\Entity\Node;
 use Drupal\rxp_render\Event\DemoEvent;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 class DemoController extends ControllerBase {
 
   protected $emailValidator;
 
+  protected RendererInterface $renderer;
+
   /**
    */
   protected ContainerAwareEventDispatcher $eventDispatcher;
+
+  public function renderParticularTemplate() {
+    /** @var \Twig\Environment $twig_service */
+
+    $twig_service = \Drupal::service('twig');
+    $template_path = \Drupal::moduleHandler()->getModule('rxp_render')
+        ->getPath() . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'first.html.twig';
+    $html_markup = $twig_service->load($template_path)
+      ->render(['header' => 'Header Custom text']);
+    return new Response($html_markup, 200);
+  }
+
+  public function main() {
+    $element['first'] = [
+      '#markup' => $this->t('Hello world'),
+    ];
+    $element['second'] = [
+      '#type' => 'my_element',
+      '#label' => $this->t('Example Label'),
+      '#description' => $this->t(' Nikolay This is the description text.'),
+    ];
+
+    return $element;
+  }
 
   public function index() {
     $build['examples_link'] = [
@@ -74,9 +102,10 @@ class DemoController extends ControllerBase {
     return $data;
   }
 
-  public function __construct(EmailValidator $emailValidator, ContainerAwareEventDispatcher $eventDispatcher) {
+  public function __construct(EmailValidator $emailValidator, ContainerAwareEventDispatcher $eventDispatcher, RendererInterface $renderer) {
     $this->emailValidator = $emailValidator;
     $this->eventDispatcher = $eventDispatcher;
+    $this->renderer = $renderer;
   }
 
   /**
@@ -86,6 +115,7 @@ class DemoController extends ControllerBase {
     return new static(
       $container->get('email.validator'),
       $container->get('event_dispatcher'),
+      $container->get('renderer'),
     );
   }
 

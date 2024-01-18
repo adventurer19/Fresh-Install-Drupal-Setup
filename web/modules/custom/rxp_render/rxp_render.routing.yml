@@ -26,13 +26,6 @@ rxp_render.modal_content:
     _title: 'Modal Test Demo'
   requirements:
     _permission: 'access content'
-rxp_render.custom_template:
-  path: '/rxp-render/custom-template'
-  defaults:
-    _controller: '\Drupal\rxp_render\Controller\RenderController::renderMyCustomTwig'
-    _title: 'Custom template'
-  requirements:
-    _access: 'TRUE'
 rxp_render.demo_controller:
   path: '/rxp-render/demo-controller'
   defaults:
@@ -40,3 +33,18 @@ rxp_render.demo_controller:
     _title: 'Demo Controller'
   requirements:
     _access: 'TRUE'
+rxp_render.demo_controller_main:
+  path: '/rxp-render/demo-controller/main'
+  defaults:
+    _controller: '\Drupal\rxp_render\Controller\DemoController::main'
+    _title: 'Demo Controller'
+  requirements:
+    _access: 'TRUE'
+rxp_render.demo_controller_particular_template:
+  path: '/rxp-render/demo-controller/particular-template'
+  defaults:
+    _controller: '\Drupal\rxp_render\Controller\DemoController::renderParticularTemplate'
+    _title: 'Demo Controller'
+  requirements:
+    _access: 'TRUE'
+
