@@ -1,0 +1,8 @@
+azure_collector.main_content:
+  path: '/azure-collector/content'
+  defaults:
+    _controller: '\Drupal\azure_collector\Controller\AzureController::content'
+    _title: 'Azure Content'
+  requirements:
+    # Bypass all permissions.
+    _access: 'TRUE'

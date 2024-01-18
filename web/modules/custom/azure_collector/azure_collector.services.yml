@@ -1,0 +1,19 @@
+services:
+  azure_collector.azure_collector_manager:
+    class: 'Drupal\azure_collector\AzureCollectorManager'
+    tags:
+    # sayHello will run for each service definition where tags.name is azure_collector
+    # also it's very important that first parameter inside sayHello must be
+    # handler instance and have a type declaration.
+      - { name: service_collector, tag: azure_collector, call: sayHello }
+  azure_collector.azure_collector:
+    class: '\Drupal\azure_collector\AzureCollector'
+    tags:
+      - { name: azure_collector, priority: 9, additional_data: 'bar'}
+    arguments: ['@messenger']
+  azure_collector.azure_second_collector:
+    class: '\Drupal\azure_collector\AzureSecondCollector'
+    tags:
+      # Keep in mind that higher priority will run first .
+      - { name: azure_collector, priority: 10 }
+    arguments: [ '@messenger' ]

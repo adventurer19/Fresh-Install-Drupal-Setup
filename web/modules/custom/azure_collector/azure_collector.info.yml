@@ -1,0 +1,10 @@
+name: 'Azure Collector'
+type: module
+description: 'Demonstrates the use of service collector services in Drupal.'
+core_version_requirement: ^9 || ^10
+package: Custom
+
+# Information added by Drupal.org packaging script on 2024-01-18
+#version: '1.0.1'
+#project: 'azure_collector'
+#datestamp: 1660664714

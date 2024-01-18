@@ -19,9 +19,7 @@ function azure_file_file_download($uri) {
  * Implements hook_ENTITY_TYPE_view_alter().
  */
 function azure_file_node_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
-  if ($entity->id() === '9') {
-    // todo alter view of node with id 9
-  }
+
 }
 
 /**

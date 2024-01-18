@@ -1,18 +1,18 @@
-services:
-  azure_file.access_checker:
-    class: 'Drupal\azure_file\NikiTagServices\AccessChecker'
-    arguments: ['@entity_type.manager']
-    tags:
-#      - { name: access_check, applies_to: _access }
-      - { name: access_check, call: access }
-  azure_file.azure_collector:
-    class: 'Drupal\azure_file\NikiTagServices\AzureCollector'
-    tags:
-      - { name: service_collector, tag: azure_collector,  call: sayName }
-  azure_file.azure_handler:
-    class: 'Drupal\azure_file\NikiTagServices\AzureHandler'
-    tags:
-      - { name: azure_collector, priority: 30  }
+#services:
+#  azure_file.access_checker:
+#    class: 'Drupal\azure_file\NikiTagServices\AccessChecker'
+#    arguments: ['@entity_type.manager']
+#    tags:
+##      - { name: access_check, applies_to: _access }
+#      - { name: access_check, call: access }
+#  azure_file.azure_collector:
+#    class: 'Drupal\azure_file\NikiTagServices\AzureCollector'
+#    tags:
+#      - { name: service_collector, tag: azure_collector,  call: sayName }
+#  azure_file.azure_handler:
+#    class: 'Drupal\azure_file\NikiTagServices\AzureHandler'
+#    tags:
+#      - { name: azure_collector, priority: 30  }
 
 #  string_translation:
 #    class: Drupal\Core\StringTranslation\TranslationManager
