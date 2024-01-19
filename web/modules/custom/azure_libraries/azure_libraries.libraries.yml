@@ -1,0 +1,9 @@
+#azure_content.main:
+#  js:
+#    js/index.js: {}
+global-scripts:
+  js:
+    js/index.js: { }
+extend-example:
+  js:
+    js/extend-example.js: {}

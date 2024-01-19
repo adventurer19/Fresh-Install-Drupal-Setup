@@ -1,0 +1,3 @@
+type: module
+name: 'Azure libraries'
+core_version_requirement: ^10

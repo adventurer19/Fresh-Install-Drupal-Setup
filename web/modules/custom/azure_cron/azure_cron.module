@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function azure_cron_cron(): void {
+  /** @var \Drupal\Core\Mail\MailManagerInterface $mailManager */
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $email_params = [];
+  $result = $mailManager->mail('azure_cron', 'cron', 'nikolay@example.com', $langcode, $email_params, NULL);
+  if ($result['result'] !== TRUE) {
+    \Drupal::messenger()
+      ->addWarning(t('There was a problem sending your message and it was not sent.'));
+  }
+  else {
+    \Drupal::messenger()->addMessage(t('Your message has been sent.'));
+  }
+}
+
+/**
+ * Implements hook_queue_info_alter().
+ */
+function azure_cron_queue_info_alter(&$queues): void {
+  $a = 1;
+}

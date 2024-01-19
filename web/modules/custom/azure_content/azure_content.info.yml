@@ -1,3 +1,13 @@
 type: module
 name: Azure Content
 core_version_requirement: ^10
+#  Modules have the ability to provide dynamic library definitions and alter libraries.
+#  A module can use the hook_library_info() hook to provide a library definition.
+#  This is not the recommended way to define a library, but it is provided for edge use cases.
+#libraries:
+#  Modules do not have the ability to use libraries-override or libraries-extend,
+#  and need to rely on the hook_library_info_alter() hook.
+#  - azure_content/azure_content.main
+#libraries-extend:
+#  azure_content/azure_content.main:
+#    - azure_libraries/extend-example

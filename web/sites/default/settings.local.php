@@ -159,3 +159,4 @@ $settings['skip_permissions_hardening'] = TRUE;
 //$settings['cache']['bins']['page'] = 'cache.backend.null';
 //$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/local.development.services.yml';
+$config['automated_cron.settings']['interval'] = 0;

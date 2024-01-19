@@ -1,0 +1,5 @@
+azure_content.main:
+  version: 1.x
+  css:
+    component:
+      css/azure_content.css: {}

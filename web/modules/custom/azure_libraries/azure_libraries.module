@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_page_attachments().
+ */
+function azure_libraries_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'azure_libraries/global-scripts';
+}
