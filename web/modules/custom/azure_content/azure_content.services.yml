@@ -1,5 +1,11 @@
-#services:
-#  azure_content.event_subsriber:
-#    class: '\Drupal\azure_content\EventSubscriber\ContentSubscriber'
-#    tags:
-#      - { name: event_subscriber }
+services:
+  azure_content.azure_path_processor:
+    class: '\Drupal\azure_content\PathProcessor\AzurePathProcessor'
+    tags:
+      - { name: path_processor_inbound, priority: 100 }
+#
+  azure_content.azure_stream_wrapper:
+    class: Drupal\azure_content\StreamWrapper\AzureStreamWrapper
+    tags:
+      - { name: stream_wrapper, scheme: azure }
+#    arguments: ['@stream_wrapper_example.session_helper']
