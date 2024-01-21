@@ -1,2 +1,11 @@
 {{ attach_library('azure_content/azure_content.main') }}
 <p {{ attributes.addClass('azure-content') }}> Hello from azure content template</p>
+<p {{ attributes.addClass('azure-content') }}> {{ 'this text will be processed by capitalize filter.' | capitalize }}</p>
+
+{#// we inject xss_attack variable inside preprocess fn#}
+{% if xss_attack %}
+    {#    this is xss attack example #}
+    {% set userInput = '<script>alert("Hello, this is an XSS inside the TWIG FILE!");</script>' %}
+    {#    here is example of raw output #}
+    {{ userInput | raw }}
+{% endif %}

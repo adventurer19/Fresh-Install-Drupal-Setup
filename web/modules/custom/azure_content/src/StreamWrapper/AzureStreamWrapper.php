@@ -3,8 +3,11 @@
 namespace Drupal\azure_content\StreamWrapper;
 
 use Drupal\Core\StreamWrapper\StreamWrapperInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 class AzureStreamWrapper implements StreamWrapperInterface {
+
+  use StringTranslationTrait;
 
   public function dir_closedir() {
     // TODO: Implement dir_closedir() method.
@@ -99,7 +102,7 @@ class AzureStreamWrapper implements StreamWrapperInterface {
   }
 
   public static function getType() {
-    // TODO: Implement getType() method.
+    return StreamWrapperInterface::NORMAL;
   }
 
   public function getName() {
@@ -107,7 +110,8 @@ class AzureStreamWrapper implements StreamWrapperInterface {
   }
 
   public function getDescription() {
-    // TODO: Implement getDescription() method.
+    return $this->t('Azure file wrapper dummy description.');
+    //    return $this->t('Public local optimized assets files served by the webserver.');
   }
 
   public function setUri($uri) {
@@ -127,7 +131,13 @@ class AzureStreamWrapper implements StreamWrapperInterface {
   }
 
   public function dirname($uri = NULL) {
-    // TODO: Implement dirname() method.
+    [$scheme] = explode('://', $uri, 2);
+    [, $target] = explode('://', $uri, 2);
+    $dirname = dirname($target);
+    if ($dirname == '.') {
+      $dirname = '';
+    }
+    return $scheme . '://' . $dirname;
   }
 
 }

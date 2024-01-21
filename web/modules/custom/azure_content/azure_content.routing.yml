@@ -6,3 +6,11 @@ azure_content.main_content:
   requirements:
     # Bypass all permissions.
     _access: 'TRUE'
+azure_content.xxs_example:
+  path: '/azure-content/xss'
+  defaults:
+    _controller: '\Drupal\azure_content\Controller\AzureContentController::xssExample'
+    _title: 'Azure Content Xss Example'
+  requirements:
+    # Bypass all permissions.
+    _access: 'TRUE'

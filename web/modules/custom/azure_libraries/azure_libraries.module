@@ -4,5 +4,21 @@
  * Implements hook_page_attachments().
  */
 function azure_libraries_page_attachments(array &$attachments): void {
-  $attachments['#attached']['library'][] = 'azure_libraries/global-scripts';
+  // attach a library on global level
+//  $attachments['#attached']['library'][] = 'azure_libraries/global-scripts';
+}
+
+/**
+ * @param string $name
+ *   The name as string value
+ * @param int $count
+ *   Represent how many times we want to print the name.
+ *
+ * @return void
+ *   Return values.
+ */
+function _azure_libraries_print_name_by_count(string $name, int $count){
+  for ($i = 0; $i < $count ; $i++) {
+    echo $name;
+}
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Component\Serialization\Yaml;
+use Drupal\Component\Utility\Xss;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -39,4 +40,39 @@ function azure_content_library_info_alter(&$libraries, $extension) {
   if (isset($libraries['azure_content.main'])) {
     $libraries['azure_content.main']['js']['/libraries/js/extend-example.js'] = [];
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function azure_content_preprocess_azure_content(&$variables) {
+  $variables['xss_attack'] = FALSE;
+    $variables['attributes']['class'][] = 'azure-preprocess-class';
+
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function azure_content_preprocess(&$variables, $hook) {
+  if ($hook === 'region' && $variables['region'] === 'content') {
+    $var = TRUE;
+  }
+  if (isset($variables['elements']['#theme']) && $variables['elements']['#theme'] === 'block') {
+    if ($variables['elements']['#id'] === 'olivero_content' &&
+      $variables['elements']['#plugin_id'] === 'system_main_block') {
+//      $variables['content']['new'] = [
+//        '#markup' => 'hell1o',
+//      ];
+    }
+    $check = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function azure_content_preprocess_html(&$variables) {
+  // example how to add class inside body tag html
+  $variables['attributes']['class'][] = 'example-class-inside-body';
 }
