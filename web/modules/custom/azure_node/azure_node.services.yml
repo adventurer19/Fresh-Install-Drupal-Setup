@@ -1,0 +1,9 @@
+services:
+#  azure_node.event_subscriber:
+#    class: Drupal\azure_node\EventSubscriber\AzureNodeEventSubscriber
+#    tags:
+#      - { name: event_subscriber }
+  azure_node.route_subscriber:
+    class: Drupal\azure_node\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

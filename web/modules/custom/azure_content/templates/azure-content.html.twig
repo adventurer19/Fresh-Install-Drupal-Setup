@@ -9,3 +9,9 @@
     {#    here is example of raw output #}
     {{ userInput | raw }}
 {% endif %}
+
+
+{{ state + ',' . street }}
+{{ state . ',' . street }}
+{{ state ~ ',' ~ street }}
+{{ state,street }}

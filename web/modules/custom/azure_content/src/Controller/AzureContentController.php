@@ -7,9 +7,11 @@ use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Xss;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\Extension\ModuleDependencyMessageTrait;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\StreamWrapper\StreamWrapperManagerInterface;
+use GuzzleHttp\Psr7\MessageTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class AzureContentController extends ControllerBase {

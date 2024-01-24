@@ -55,18 +55,18 @@ function azure_content_preprocess_azure_content(&$variables) {
  * Implements hook_preprocess().
  */
 function azure_content_preprocess(&$variables, $hook) {
-  if ($hook === 'region' && $variables['region'] === 'content') {
-    $var = TRUE;
-  }
-  if (isset($variables['elements']['#theme']) && $variables['elements']['#theme'] === 'block') {
-    if ($variables['elements']['#id'] === 'olivero_content' &&
-      $variables['elements']['#plugin_id'] === 'system_main_block') {
-//      $variables['content']['new'] = [
-//        '#markup' => 'hell1o',
-//      ];
-    }
-    $check = TRUE;
-  }
+//  if ($hook === 'region' && $variables['region'] === 'content') {
+//    $var = TRUE;
+//  }
+//  if (isset($variables['elements']['#theme']) && $variables['elements']['#theme'] === 'block') {
+////    if ($variables['elements']['#id'] === 'olivero_content' &&
+////      $variables['elements']['#plugin_id'] === 'system_main_block') {
+////      $variables['content']['new'] = [
+////        '#markup' => 'hell1o',
+////      ];
+//    }
+//    $check = TRUE;
+//  }
 }
 
 /**
