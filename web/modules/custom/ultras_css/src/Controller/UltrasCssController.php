@@ -36,6 +36,16 @@ final class UltrasCssController extends ControllerBase {
     $build['ultras_css'] = [
       '#theme' => 'ultras_css',
     ];
+    $build['inline_element'] = [
+      '#type' => 'inline_template',
+      '#template' => '<p> {{ para }}</p>',
+      '#context' => ['para' => 'paragraph demo showcase'],
+    ];
+    $build['book'] = [
+      '#type' => 'ultras_book',
+      '#book_author' => 'Niki P',
+      '#book_title' => 'How to be top G',
+    ];
     $build['content'] = [
       '#markup' => $this->t($text),
       '#attributes' => ['class' => ['ultras-css-module']],

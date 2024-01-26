@@ -70,5 +70,21 @@ function ultras_css_theme($existing, $type, $theme, $path): array {
     'ultras_css' => [
       'render element' => 'element',
     ],
+    'ultras_element' => [
+      'render element' => 'element',
+    ],
+    'ultras_book' => [
+      'render element' => 'element',
+    ],
   ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ultras_css_preprocess_ultras_book(&$variables) {
+  $variables['content'] = [];
+  $variables['content']['book_name'] = $variables['element']['#book_name'];
+  $variables['content']['book_author'] = $variables['element']['#book_author'];
+  $a = 1;
 }
