@@ -1,0 +1,4 @@
+type: module
+core_version_requirement: ^10
+name: Azure builder
+description: Adding programmatically additional region in the layout builder

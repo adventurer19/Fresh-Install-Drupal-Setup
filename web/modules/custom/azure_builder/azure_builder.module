@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function azure_builder_theme($existing, $type, $theme, $path): array {
+  return [
+    'azure_builder' => [
+      'render element' => 'element',
+    ],
+  ];
+}
+
+
+function azure_builder_template_preprocess(&$variables, $hook, $info) {
+  $a = 1;
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function azure_builder_preprocess_block(&$variables) {
+  if ($variables['elements']['#base_plugin_id'] === 'block_content') {
+    if ($variables['elements']['content']['#block_content']->id() === '4') {
+      $variables['content']['azure_builder_theme_hook_element']['#theme'] = 'azure_builder';
+    }
+
+  }
+}

@@ -1,0 +1,27 @@
+{% set city = 'Gabrovo' %}
+{% set postcode = 5300 %}
+{% set numbers = [1,2,3,4,5] %}
+{% set example_paragraph %}
+<div>
+    <h2>Main Content</h2>
+    <p>This is a sample paragraph. It contains some text to illustrate the structure of an HTML paragraph.</p>
+
+    <p>Here is another paragraph with additional content.</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+{% endset %}
+<p>{{ example_paragraph }}</p>
+
+{% for index in numbers %}
+    <p>Line:{{ index }}</p>
+{% endfor %}
+<p>azure builder</p>
+<p>{{ city ~ ' word lenght is : ' ~ city|length }}</p>
+<p>We have array of numbers [1,2,3,4,5].Here we print the array concatenated with pipe {{ numbers|join('|')}} . </p>
+<p>{{ 'Here we print the second element of the array .' ~ numbers[1] }}</p>
+<p>This is example of concatenation {{ city ~ ',' ~ postcode }}</p>

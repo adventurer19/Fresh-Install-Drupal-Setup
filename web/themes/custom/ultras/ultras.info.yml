@@ -1,0 +1,69 @@
+name: ultras
+type: theme
+base theme: olivero
+package: Core
+version: VERSION
+libraries:
+  - ultras/ultras-global
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: 'Social Bar'
+  content_above: 'Content Above'
+  content: Content
+  sidebar: Sidebar
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+#libraries-override:
+#  system/admin:
+#    css:
+#      theme:
+#        css/system.admin.css: false
+#  system/base:
+#    css:
+#      component:
+#        css/components/ajax-progress.module.css: css/components/ajax-progress.module.css
+#        css/components/autocomplete-loading.module.css: css/components/autocomplete-loading.module.css
+#  core/drupal.checkbox: false
+#  core/drupal.dropbutton:
+#    css:
+#      component:
+#        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+#  core/drupal.vertical-tabs:
+#    css:
+#      component:
+#        misc/vertical-tabs.css: css/components/vertical-tabs.css
+#  media/oembed.formatter: false
+#  layout_builder/twocol_section: olivero/layout_builder_twocol_section
+#  layout_builder/threecol_section: olivero/layout_builder_threecol_section
+#  layout_builder/fourcol_section: olivero/layout_builder_fourcol_section
+#libraries-extend:
+#  core/drupal.message:
+#    - ultras/drupal.message
+#  core/drupal.collapse:
+#    - ultras/details
+#  core/drupal.dialog:
+#    - ultras/drupal.dialog
+#  core/drupal.progress:
+#    - ultras/progress
+#  layout_discovery/onecol:
+#    - ultras/layout_discovery_section
+#  layout_discovery/twocol_bricks:
+#    - ultras/layout_discovery_section
+#  layout_discovery/twocol:
+#    - ultras/layout_discovery_section
+#  layout_discovery/threecol_25_50_25:
+#    - ultras/layout_discovery_section
+#  layout_discovery/threecol_33_34_33:
+#    - ultras/layout_discovery_section
+#  node/drupal.node.preview:
+#    - ultras/drupal.node.preview
+#  content_moderation/content_moderation:
+#    - ultras/content_moderation
+core_version_requirement: ^10
+generator: 'olivero:10.2.2'

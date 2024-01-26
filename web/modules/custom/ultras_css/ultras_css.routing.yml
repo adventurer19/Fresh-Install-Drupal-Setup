@@ -1,0 +1,7 @@
+ultras_css.main:
+  path: '/ultras-css/main'
+  defaults:
+    _title: 'Main'
+    _controller: '\Drupal\ultras_css\Controller\UltrasCssController::content'
+  requirements:
+    _permission: 'access content'

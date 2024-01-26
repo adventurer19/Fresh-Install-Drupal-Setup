@@ -1,0 +1,74 @@
+<?php
+//
+//function template_preprocess(&$variables, $hook, $info) {
+//  $a = 1;
+//}
+
+/**
+ * Implements hook_template_preprocess_default_variables_alter().
+ */
+function ultras_css_template_preprocess_default_variables_alter(&$variables) {
+  // This hook is called inside template_preprocess hook which is the first hook in the
+  // sequence of preprocess hooks.The main purpose of template preprocess hook is to set the
+  // default initial variables inside twig template.Those variables are
+  // attributes
+  // title_attributes
+  // content_attributes
+  // db_is_active
+  // logged_in
+  // is admin
+  // IF you want to add additional variables or to alter the existing ones you can use this hook
+  // hook_template_preprocess_default_variables_alter inside a module, not inside a theme.
+  // For demo purposes we set is_ultras_css_module_enabled.
+  // To make sure you are defining or altering variables you can use dump function inside a twig template file,
+  // and you will see the available variables.
+  $variables['is_ultras_css_module_enabled'] = TRUE;
+}
+
+/**
+ * Implements template_preprocess_HOOK() for ultras_css.
+ */
+function template_preprocess_ultras_css(&$variables): void {
+  // Template preprocess hook is called only once , it cannot be created more than 1 time .
+  // definition location could be on the theme or module.
+  $variables['ultas_css_template_preprocess_hook_additional_variable'] = 'This is new variable by template preprocess hook utlras-cs ';
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function ultras_css_preprocess(&$variables, $hook): void {
+  // first preprocess hooks from modules are called in the following order
+  // preprocess
+  // preprocess_hook (specific)
+  if ($hook === 'ultras_css') {
+    $variables['ultras_hook_preprocess_variable'] = 'ultras_hook_preprocess_variable';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ultras_css_preprocess_ultras_css(&$variables): void {
+  // first preprocess hooks from modules are called in the following order
+  // preprocess
+  // preprocess_hook (specific)
+  $variables['ultras_hook_preprocess_ultras_css_variable'] = 'ultras_hook_preprocess_ultras_css_variable';
+  $variables['print_data'] = [
+    'ultas_css_template_preprocess_hook_additional_variable' => $variables['ultas_css_template_preprocess_hook_additional_variable'],
+    'ultras_hook_preprocess_ultras_css_variable' => $variables['ultras_hook_preprocess_ultras_css_variable'],
+    'ultras_hook_preprocess_variable' => $variables['ultras_hook_preprocess_variable'],
+    'is_ultras_css_module_enabled' => $variables['is_ultras_css_module_enabled'],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ultras_css_theme($existing, $type, $theme, $path): array {
+  return [
+    'ultras_css' => [
+      'render element' => 'element',
+    ],
+  ];
+}

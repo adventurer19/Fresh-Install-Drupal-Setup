@@ -1,0 +1,23 @@
+#type key is required .
+type: theme
+# name key is required .
+name: 'Azure theme'
+description: 'This theme will inherit the base theme classy.'
+# core version requirement key is required.
+core_version_requirement: ^10
+#base theme is required from drupal 9 and above.
+base theme: olivero
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  hero: Hero (full width)
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: Sidebar
+  content_below: Content Below
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom

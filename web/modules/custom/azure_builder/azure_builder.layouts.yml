@@ -1,0 +1,31 @@
+#azure_builder_layout_section:
+#  label: '5 Columns'
+#  path: layouts/twocol_section
+#  template: layout--twocol-section
+#  library: layout_builder/twocol_section
+#  class: '\Drupal\layout_builder\Plugin\Layout\TwoColumnLayout'
+#  category: 'Columns: 2'
+#  default_region: first
+#  icon_map:
+#    - [first, second]
+#  regions:
+#    first:
+#      label: First
+#    second:
+#      label: Second
+azure_builder.layouts_threecol_25_50_25:
+  label: ' Three column 25/50/25'
+  path: templates/layouts
+  template: custom-layouts--threecol-25-50-25
+  class: '\Drupal\azure_builder\Layout\ThreeColumnsLayoutClass'
+  category: 'Columns: 3'
+  default_region: second
+  icon_map:
+    - [ first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
