@@ -1,0 +1,16 @@
+{# pyramid.twig #}
+<h1>This is my pyramid</h1>
+{% set height = pyramid_height %}
+{% set length = pyramid_length %}
+
+{% for row in 1..height %}
+    {# Calculate number of spaces and asterisks for current row #}
+    {% set spaces = (length - (2 * row - 1)) / 2 %}
+    {% set asterisks = length - (2 * spaces) %}
+
+    {# Output spaces and asterisks for current row #}
+    {% for space in 1..spaces %}&nbsp;{% endfor %}
+    {% for asterisk in 1..asterisks %}*{% endfor %}
+
+    <br>
+{% endfor %}

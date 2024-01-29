@@ -37,10 +37,3 @@ function ultras_preprocess_html(&$variables) {
   $variables['attributes']['id'] = 'ultras-body';
   $variables['page']['#attached']['library'][] = 'ultras/ultras-global';
 }
-
-/**
- * Implements hook_theme().
- */
-function ultras_theme($existing, $type, $theme, $path) {
-$a = 1;
-}

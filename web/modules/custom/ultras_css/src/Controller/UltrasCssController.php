@@ -66,4 +66,30 @@ final class UltrasCssController extends ControllerBase {
     return $build;
   }
 
+  public function pyramid(): array {
+    $computed_settings = [
+      'height' => '10',
+      'length' => '12',
+    ];
+    $text = $this->t('pyramid');
+    return [
+      [
+        '#theme' => 'ultras_pyramid',
+        '#pyramid_height' => 5,
+        '#pyramid_length' => 5,
+      ],
+      [
+        '#markup' => "<div id='pyramid'>$text</div>",
+        '#attached' => [
+          'library' => ['ultras_css/ultras_pyramid'],
+          'drupalSettings' => [
+            'nikiP' => [
+              'slider' => $computed_settings,
+            ],
+          ],
+        ],
+      ],
+    ];
+  }
+
 }

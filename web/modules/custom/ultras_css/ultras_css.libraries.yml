@@ -1,0 +1,7 @@
+ultras_pyramid:
+  version: VERSION
+  js:
+    js/ultras.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/once

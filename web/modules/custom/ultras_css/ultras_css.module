@@ -70,6 +70,13 @@ function ultras_css_theme($existing, $type, $theme, $path): array {
     'ultras_css' => [
       'render element' => 'element',
     ],
+    'ultras_pyramid' => [
+      'render element' => 'element',
+      'variables' => [
+        'pyramid_height' => NULL,
+        'pyramid_length' => NULL,
+      ],
+    ],
     'ultras_element' => [
       'render element' => 'element',
     ],

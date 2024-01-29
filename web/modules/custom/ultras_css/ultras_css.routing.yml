@@ -5,3 +5,10 @@ ultras_css.main:
     _controller: '\Drupal\ultras_css\Controller\UltrasCssController::content'
   requirements:
     _permission: 'access content'
+ultras_css.pyramid:
+  path: '/ultras-css/pyramid'
+  defaults:
+    _title: 'Pyramid'
+    _controller: '\Drupal\ultras_css\Controller\UltrasCssController::pyramid'
+  requirements:
+    _permission: 'access content'
