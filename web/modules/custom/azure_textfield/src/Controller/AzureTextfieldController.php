@@ -16,12 +16,16 @@ final class AzureTextfieldController extends ControllerBase {
    * Builds the response.
    */
   public function __invoke(): array {
-    $build['input'] = [
-      '#theme' => 'azure_textfield__input',
-//      '#theme_wrappers' => ['form_element'],
-    ];
-    $build['input_2'] = [
-      '#theme' => 'azure_textfield',
+//    $build['azure_textfield__input'] = [
+//      '#theme' => 'azure_textfield__input',
+////      '#theme_wrappers' => ['form_element'],
+//    ];
+//    $build['azure_textfield'] = [
+//      '#theme' => 'azure_textfield',
+//      //      '#theme_wrappers' => ['form_element'],
+//    ];
+    $build['relux_textfield'] = [
+      '#theme' => 'relux__textfield__input',
       //      '#theme_wrappers' => ['form_element'],
     ];
     return $build;

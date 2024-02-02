@@ -2,7 +2,7 @@
 type: theme
 # name key is required .
 name: 'Azure theme'
-description: 'This theme will inherit the base theme classy.'
+description: 'This theme will inherit the claro'
 # core version requirement key is required.
 core_version_requirement: ^10
 #base theme is required from drupal 9 and above.

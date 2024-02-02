@@ -8,15 +8,17 @@ function azure_textfield_theme($existing, $type, $theme, $path): array {
     'azure_textfield' => [
       'render element' => 'element',
     ],
+    'relux' => [
+      'render element' => 'element',
+    ],
   ];
 }
-//
-///**
-// * Implements hook_theme_suggestions_HOOK().
-// */
-//function azure_textfield_theme_suggestions_azure_textfield(array $variables): array {
-//  $suggestions = [];
-//  $suggestions[] = 'azure_textfield__first';
-//  $suggestions[] = 'azure_textfield__second';
-//  return $suggestions;
-//}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function azure_textfield_theme_suggestions_relux(array $variables) {
+  $suggestions = [];
+  $suggestions[] = 'relux__textfield__input';
+  return $suggestions;
+}

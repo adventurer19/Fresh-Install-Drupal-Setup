@@ -1,0 +1,22 @@
+name: azure_starter
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - azure_starter/base
+  - azure_starter/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - azure_starter/user
+  core/drupal.dropbutton:
+    - azure_starter/dropbutton
+  core/drupal.dialog:
+    - azure_starter/dialog
+  file/drupal.file:
+    - azure_starter/file
+  core/drupal.progress:
+    - azure_starter/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.2.2'
