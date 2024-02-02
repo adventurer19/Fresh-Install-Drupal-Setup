@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function azure_pyramid_theme($existing, $type, $theme, $path): array {
+  return [
+    'azure_wrapper' => [
+      'render element' => 'element',
+    ],
+    'azure_pyramid' => [
+      'render element' => 'element',
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+  ];
+}

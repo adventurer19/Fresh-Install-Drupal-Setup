@@ -1,0 +1,21 @@
+azure_pyramid.azure_pyramid_settings:
+  path: '/azure-pyramid/azure-pyramid-settings'
+  defaults:
+    _title: 'Azure Pyramid Settings'
+    _form: 'Drupal\azure_pyramid\Form\AzurePyramidSettings'
+  requirements:
+    _permission: 'administer site configuration'
+azure_pyramid.index:
+  path: '/azure-pyramid/index'
+  defaults:
+    _title: 'Index'
+    _controller: '\Drupal\azure_pyramid\Controller\AzurePyramidController::index'
+  requirements:
+    _permission: 'access content'
+azure_pyramid.page:
+  path: '/azure-pyramid/page'
+  defaults:
+    _title: 'Page'
+    _controller: '\Drupal\azure_pyramid\Controller\AzurePyramidController::page'
+  requirements:
+    _permission: 'access content'

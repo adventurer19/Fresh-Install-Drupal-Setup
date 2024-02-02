@@ -1,0 +1,7 @@
+azure_textfield.index:
+  path: '/azure-textfield/index'
+  defaults:
+    _title: 'Azure TextField'
+    _controller: '\Drupal\azure_textfield\Controller\AzureTextfieldController'
+  requirements:
+    _permission: 'access content'

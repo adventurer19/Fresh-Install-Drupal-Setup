@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function azure_textfield_theme($existing, $type, $theme, $path): array {
+  return [
+    'azure_textfield' => [
+      'render element' => 'element',
+    ],
+  ];
+}
+//
+///**
+// * Implements hook_theme_suggestions_HOOK().
+// */
+//function azure_textfield_theme_suggestions_azure_textfield(array $variables): array {
+//  $suggestions = [];
+//  $suggestions[] = 'azure_textfield__first';
+//  $suggestions[] = 'azure_textfield__second';
+//  return $suggestions;
+//}

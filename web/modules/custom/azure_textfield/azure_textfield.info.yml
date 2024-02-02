@@ -1,0 +1,5 @@
+name: 'Azure textfield'
+type: module
+description: '@todo Add description.'
+package: '@todo Add package'
+core_version_requirement: ^10

@@ -1,0 +1,5 @@
+pyramid-styles:
+  version: VERSION
+  css:
+    theme:
+      css/pyramid.css: {}

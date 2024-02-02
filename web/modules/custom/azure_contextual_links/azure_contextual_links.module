@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function azure_contextual_links_preprocess_views_view_grid(&$variables) {
+  if (isset($variables['items'][0]['content'][0]['content'])) {
+//    $variables['items'][0]['content'][0]['content']['data'] = 1;
+//    $variables['items'][0]['content'][0]['content'][] = 'hello';
+//    $variables['items'][0]['content'][0]['content'][]
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function azure_contextual_links_preprocess_views_view_fields(&$variables) {
+
+}

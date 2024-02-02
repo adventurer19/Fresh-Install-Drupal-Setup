@@ -1,0 +1,9 @@
+{% set height = height ?? 100 %}
+{% set length = length ?? 50 %}
+{{ attach_library('azure_pyramid/pyramid-styles') }}
+
+{% set pyramidStyles = "border-bottom: " ~ height ~ "px solid #55adee; border-left: " ~ length ~ "px solid transparent; border-right: " ~ length ~ "px solid transparent;" %}
+
+<div class="pyramid-container">
+    <div class="pyramid" style="{{ pyramidStyles }}"></div>
+</div>

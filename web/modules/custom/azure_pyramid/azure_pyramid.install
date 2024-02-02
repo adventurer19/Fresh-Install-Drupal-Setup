@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\azure_pyramid\Form\AzurePyramidSettings;
+
+/**
+ * Implements hook_uninstall().
+ */
+function azure_pyramid_uninstall(): void {
+  $config_factory = \Drupal::configFactory();
+  $messenger = \Drupal::messenger();
+  foreach (AzurePyramidSettings::EditableConfigNames as $config_name) {
+    $config = $config_factory->getEditable($config_name);
+    $messenger->addMessage(t('Configuration %name is deleted successfully', ['%name' => $config->getName()]));
+    $config->delete();
+  }
+}
